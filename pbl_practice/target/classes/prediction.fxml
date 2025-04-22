@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PredictionController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Infant Mortality Rate Prediction" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+    
+    <VBox fx:id="featureInputs" spacing="10" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 5;">
+        <Label text="Enter Feature Values:" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+    </VBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Make Prediction" 
+                onAction="#predict"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+        
+        <Button text="Back to Analysis" 
+                onAction="#goBack"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+    </HBox>
+
+    <VBox alignment="CENTER" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 5;">
+        <Label text="Prediction Result" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+        <Label fx:id="predictionResult" style="-fx-font-size: 20px; -fx-text-fill: #27ae60;"/>
+    </VBox>
+</VBox> 
